@@ -1,0 +1,166 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.toolbar{
+  overflow: hidden;
+  position: fixed;
+  z-index: 101;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 4px 16px;
+  background-color:#3751da;
+
+  .logo{
+       width: 24px;
+      height: 24px;
+      transform: scale(2);
+    }
+}
+
+.menu {
+  margin-top: 3.8rem;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  background-color: #3751da;
+  overflow: hidden;
+  align-items: center;
+
+  ul{
+    margin-top: 2.8rem;
+    margin-bottom: 4.8rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+
+
+
+    li {
+
+      font-size: 3.4rem;
+      padding: 2.5rem;
+      font-weight: 700;
+
+      a{
+        text-decoration-line: none;
+        color: white;
+
+      }
+    }
+  }
+
+  .button {
+    background: #d6dbf3;
+    transition-duration: 0.4s;
+  border-radius: 4rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+
+  color: #3751da;
+
+  display: inline;
+  padding: 1.6rem 3.2rem;
+
+  margin-top: 2.8rem;
+  margin-bottom: 2.8rem;
+  width: 70%;
+
+
+  }
+
+  .links{
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+}
+
+footer{
+
+    background-color: var(--primary-color);
+    padding-block: 6rem;
+    text-align: center;
+    color: white;
+
+  ul{
+     list-style-type: none;
+
+}
+  .col-a{
+    p{
+      line-height: 5rem;
+    }
+    .logo{
+      width: 2.4rem;
+     height: 2.4rem;
+     transform: scale(2);
+   }
+  }
+}
+
+@media (min-width: 1000px) {
+
+  #contact{
+    .col-b{
+      img{
+        width: 100rem;
+      }
+
+    }
+  }
+
+
+  footer{
+    padding-block: 8rem;
+    p {
+      margin-bottom: 0;
+    }
+    background-color: var(--primary-color);
+    text-align: left;
+    color: white;
+    margin:0;
+
+  ul{
+     list-style-type: none;
+
+}
+  .col-a{
+     align-self: center;
+       p{
+      line-height: 5rem;
+    }
+    .logo{
+      width: 2.4rem;
+     height: 2.4rem;
+     transform: scale(2);
+   }
+  }
+
+  .col-b {
+    align-self: center;
+  justify-self: flex-end;
+    .social-links {
+    justify-content: flex-start;
+    }
+  }
+  .wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'A B';
+  }
+}
+
+
+}
+
