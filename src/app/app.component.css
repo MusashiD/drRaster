@@ -37,7 +37,7 @@
   border-radius: 1.312rem;
   background-color: rgba(251, 245, 245, 0.539);
   position: relative;
-  width: 73%;
+  width: 60%;
 }
 .form::before{
   content: '';
@@ -64,13 +64,13 @@
 }
 #login, #password {
   padding: 0.562rem 0.812rem;
-  height: 3.18rem;
-  width: 28.81rem;
+  height: 3.18em;
+  width: 16.81em;
 
 }
 div .access .button{
-  height: 4.18rem;
-  width: 28.81rem;
+  height: 4rem;
+  width: 25.81rem;
   padding: 0.625rem 1.25rem;
   font: 2rem "Helvetica Neue", sans-serif;
   font-weight: 600;
@@ -322,7 +322,7 @@ section .content p {
 
 }
 
-#services .card h3 {
+#services .card h3{
   margin-block: 1.6rem;
 }
 #services .hidden-box {
@@ -356,6 +356,7 @@ section .content p {
   max-height: 300px;
   visibility: visible;
 }
+
 
 #services .servicedesc {
   text-align: center;
@@ -420,21 +421,6 @@ section .content p {
     -webkit-transition: all 0.5s;
     opacity: 0;
 }
-/*=== ABOUT =================================*/
-#about {
-  text-align: left;
-  background-color: #fefefe;
-}
-
-#about header h2 {
-  margin-bottom: 2.4rem;
-}
-
-#about .content p {
-  margin-top: 2.4rem;
-  margin-bottom: 6rem;
-}
-
 /*=== CONTACT =================================*/
 #contact {
   text-align: left;
@@ -669,6 +655,7 @@ section .content p {
     flex-grow: 1;
   }
 
+
   /*===============ABOUT===================*/
   #about .wrapper {
     grid-template-columns: 48rem 1fr;
@@ -683,6 +670,65 @@ section .content p {
   #about .contet p {
     margin-bottom: 0;
   }
+=======
+  #about .cards{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    gap: 3.8rem;
+  }
+
+  #about .card{
+    width: 32rem;
+    flex-grow: 1;
+  }
+
+  #about ul{
+    display: flex;
+    color: rgb(254, 252, 252);
+    flex-direction: row;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    font-size: 1.5rem;
+    margin-left: 2.5rem;
+  }
+
+  #about ul li{
+    width: 10rem;
+    margin-left:2rem
+  }
+
+  #about .cards h1{
+    font-size: 5.3rem;
+    color: red;
+    margin-bottom: 1.5rem;
+  }
+
+  #about .cards p{
+    font-size: 2.3rem;
+    color: rgb(246, 246, 246);
+  }
+
+  #services .secondaryText{
+    content: ' ';
+    width: 0;
+    height: 0;
+    transition: height 3s;
+  }
+
+  #services .card:hover .mainText{
+    display:none;
+  }
+
+  #services .card:hover .secondaryText{
+    content: 'HELLO';
+    background-color: aqua;
+    height: 100%;
+    width: 100%;
+    display:block;
+  }
+
   /*===============CONTACT===================*/
   #contact .wrapper {
     grid-template-columns: 1fr 57.5rem;
@@ -695,9 +741,20 @@ section .content p {
 
   .form{
     margin-top:0;
-    top:2.8em;
+    top:2.5em;
+    margin-left: 10rem;
   }
 
+  #services {
+    padding-bottom: 0;
+  }
+  #about{
+    height: 10rem;
+  }
+
+  #contact{
+    padding-bottom: 12rem;
+  }
 
 
 
