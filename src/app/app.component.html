@@ -1,20 +1,46 @@
 <mat-toolbar color="primary" class="toolbar">
-  <button mat-icon-button  >
-    <mat-icon svgIcon="logo" class="logo"  aria-hidden="false" aria-label="DrRaster">
-
+  <button mat-icon-button>
+    <mat-icon
+      svgIcon="logo"
+      class="logo"
+      aria-hidden="false"
+      aria-label="DrRaster"
+    >
     </mat-icon>
     <span>RealRastreamento</span>
-     </button>
+  </button>
 
   <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon" (click)="openMenu()" aria-label="Example icon-button with heart icon">
+  <button
+    mat-icon-button
+    class="example-icon"
+    (click)="openMenu()"
+    aria-label="Example icon-button with heart icon"
+  >
     <mat-icon>menu</mat-icon>
   </button>
 </mat-toolbar>
 
-
- <mat-toolbar color="primary" class="toolbarDesktop">
+<mat-toolbar color="primary" class="toolbarDesktop">
   <a href="#" class="logoButton">
+
+    <button mat-icon-button>
+      <mat-icon
+        svgIcon="logo"
+        class="logo"
+        aria-hidden="false"
+        aria-label="DrRaster"
+      ></mat-icon>
+    </button>
+    <h1>Real Rastreamento</h1>
+  </a>
+
+  <a class="buttonDesktop">Início</a>
+  <a class="buttonDesktop">Serviços</a>
+  <a class="buttonDesktop">Contato</a>
+  <a class="buttonRastreio" href="#contact"> Rastreie aqui seu veículo </a>
+</mat-toolbar>
+
      <button mat-icon-button >
     <mat-icon svgIcon="logo" class="logo"  aria-hidden="false" aria-label="DrRaster"></mat-icon>
      </button>
@@ -33,113 +59,113 @@
   </mat-toolbar>
 
 
+<div *ngIf="isMenuOpen">
+  <div class="menu">
+    <ul>
+      <li><a onclick="closeMenu()" href="#home">Início</a></li>
+      <li><a onclick="closeMenu()" href="#services">Serviços</a></li>
+      <li><a onclick="closeMenu()" href="#about">Sobre</a></li>
+    </ul>
 
-  <div *ngIf="isMenuOpen">
-    <div class="menu">
-      <ul>
-        <li><a onclick="closeMenu()" href="#home">Início</a></li>
-        <li><a onclick="closeMenu()" href="#services">Serviços</a></li>
-        <li><a onclick="closeMenu()" href="#about">Sobre</a></li>
-      </ul>
+    <a class="button" href="#contact">Faça um orçamento</a>
 
-      <a class="button"  href="#contact">Faça um orçamento</a>
-
-      <ul class="links">
-        <li>
-          <a target="_blank" href="https://instagram.com/maykbrito"
-            ><svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M17 1.99997H7C4.23858 1.99997 2 4.23855 2 6.99997V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V6.99997C22 4.23855 19.7614 1.99997 17 1.99997Z"
-                stroke="#FFFAF1"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M15.9997 11.3701C16.1231 12.2023 15.981 13.0523 15.5935 13.7991C15.206 14.5459 14.5929 15.1515 13.8413 15.5297C13.0898 15.908 12.2382 16.0397 11.4075 15.906C10.5768 15.7723 9.80947 15.3801 9.21455 14.7852C8.61962 14.1903 8.22744 13.4229 8.09377 12.5923C7.96011 11.7616 8.09177 10.91 8.47003 10.1584C8.84829 9.40691 9.45389 8.7938 10.2007 8.4063C10.9475 8.0188 11.7975 7.87665 12.6297 8.00006C13.4786 8.12594 14.2646 8.52152 14.8714 9.12836C15.4782 9.73521 15.8738 10.5211 15.9997 11.3701Z"
-                stroke="#FFFAF1"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M17.5 6.49997H17.51"
-                stroke="#FFFAF1"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://facebook.com/maykbrito">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M18 1.99997H15C13.6739 1.99997 12.4021 2.52675 11.4645 3.46444C10.5268 4.40212 10 5.67389 10 6.99997V9.99997H7V14H10V22H14V14H17L18 9.99997H14V6.99997C14 6.73475 14.1054 6.4804 14.2929 6.29286C14.4804 6.10533 14.7348 5.99997 15 5.99997H18V1.99997Z"
-                stroke="#FFFAF1"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://youtube.com/maykbrito">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M22.5396 6.42C22.4208 5.94541 22.1789 5.51057 21.8382 5.15941C21.4976 4.80824 21.0703 4.55318 20.5996 4.42C18.8796 4 11.9996 4 11.9996 4C11.9996 4 5.1196 4 3.3996 4.46C2.92884 4.59318 2.50157 4.84824 2.16094 5.19941C1.82031 5.55057 1.57838 5.98541 1.4596 6.46C1.14481 8.20556 0.990831 9.97631 0.999595 11.75C0.988374 13.537 1.14236 15.3213 1.4596 17.08C1.59055 17.5398 1.8379 17.9581 2.17774 18.2945C2.51758 18.6308 2.93842 18.8738 3.3996 19C5.1196 19.46 11.9996 19.46 11.9996 19.46C11.9996 19.46 18.8796 19.46 20.5996 19C21.0703 18.8668 21.4976 18.6118 21.8382 18.2606C22.1789 17.9094 22.4208 17.4746 22.5396 17C22.852 15.2676 23.0059 13.5103 22.9996 11.75C23.0108 9.96295 22.8568 8.1787 22.5396 6.42Z"
-                stroke="#FFFAF1"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M9.75 15.02L15.5 11.75L9.75 8.48001V15.02Z"
-                stroke="#FFFAF1"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </div>
+    <ul class="links">
+      <li>
+        <a target="_blank" href="https://instagram.com/maykbrito"
+          ><svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17 1.99997H7C4.23858 1.99997 2 4.23855 2 6.99997V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V6.99997C22 4.23855 19.7614 1.99997 17 1.99997Z"
+              stroke="#FFFAF1"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M15.9997 11.3701C16.1231 12.2023 15.981 13.0523 15.5935 13.7991C15.206 14.5459 14.5929 15.1515 13.8413 15.5297C13.0898 15.908 12.2382 16.0397 11.4075 15.906C10.5768 15.7723 9.80947 15.3801 9.21455 14.7852C8.61962 14.1903 8.22744 13.4229 8.09377 12.5923C7.96011 11.7616 8.09177 10.91 8.47003 10.1584C8.84829 9.40691 9.45389 8.7938 10.2007 8.4063C10.9475 8.0188 11.7975 7.87665 12.6297 8.00006C13.4786 8.12594 14.2646 8.52152 14.8714 9.12836C15.4782 9.73521 15.8738 10.5211 15.9997 11.3701Z"
+              stroke="#FFFAF1"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M17.5 6.49997H17.51"
+              stroke="#FFFAF1"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="https://facebook.com/maykbrito">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18 1.99997H15C13.6739 1.99997 12.4021 2.52675 11.4645 3.46444C10.5268 4.40212 10 5.67389 10 6.99997V9.99997H7V14H10V22H14V14H17L18 9.99997H14V6.99997C14 6.73475 14.1054 6.4804 14.2929 6.29286C14.4804 6.10533 14.7348 5.99997 15 5.99997H18V1.99997Z"
+              stroke="#FFFAF1"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="https://youtube.com/maykbrito">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M22.5396 6.42C22.4208 5.94541 22.1789 5.51057 21.8382 5.15941C21.4976 4.80824 21.0703 4.55318 20.5996 4.42C18.8796 4 11.9996 4 11.9996 4C11.9996 4 5.1196 4 3.3996 4.46C2.92884 4.59318 2.50157 4.84824 2.16094 5.19941C1.82031 5.55057 1.57838 5.98541 1.4596 6.46C1.14481 8.20556 0.990831 9.97631 0.999595 11.75C0.988374 13.537 1.14236 15.3213 1.4596 17.08C1.59055 17.5398 1.8379 17.9581 2.17774 18.2945C2.51758 18.6308 2.93842 18.8738 3.3996 19C5.1196 19.46 11.9996 19.46 11.9996 19.46C11.9996 19.46 18.8796 19.46 20.5996 19C21.0703 18.8668 21.4976 18.6118 21.8382 18.2606C22.1789 17.9094 22.4208 17.4746 22.5396 17C22.852 15.2676 23.0059 13.5103 22.9996 11.75C23.0108 9.96295 22.8568 8.1787 22.5396 6.42Z"
+              stroke="#FFFAF1"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M9.75 15.02L15.5 11.75L9.75 8.48001V15.02Z"
+              stroke="#FFFAF1"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+      </li>
+    </ul>
   </div>
+</div>
 
-  <section id="home">
+<section id="home">
   <div class="wrapper">
     <div class="col-a">
-
       <header>
-        <h4 style="color:rgba(255, 255, 255, 0.928)">BEM VINDOS A Real Rastreamento 👋</h4>
-        <h1 style="color: white">Rastreamento Veícular simplificado para todos</h1>
+        <h4 style="color: rgba(255, 255, 255, 0.928)">
+          BEM VINDOS A Real Rastreamento 👋
+        </h4>
+        <h1 style="color: white">
+          Rastreamento Veícular simplificado para todos
+        </h1>
       </header>
 
       <div class="content">
-        <p>
-         O controle em suas mãos
-        </p>
+        <p>O controle em suas mãos</p>
         <a class="button" href="#contact">
           <svg
             width="20"
@@ -156,62 +182,89 @@
 
           Faça um orçamento
         </a>
-
       </div>
     </div>
 
     <div class="col-b">
-       <div class="container">
-          <div class="form">
-               <div class="smallheader">
-                   <strong style="color:white">Faça um teste no portal do cliente.</strong>
-               </div>
-               <div class="inputinformation">
-               <div class="campo">
-                   <input type="text" id="login" placeholder="Usuário:teste" value="teste" onclick="clearinput(this)" onblur="addback(this)">
-               </div>
-               <div class="campo">
-                   <input type="password" id="password" placeholder="Senha:123" value="1234" onclick="clearinput(this)" onblur="addback(this)">
-               </div>
-               <div class="access">
-                   <button class="button">Acessar</button>
-               </div>
-               </div>
-
-               <div class="divider"></div>
-
-               <div class="smallfooter">
-               <p>Disponível nas Lojas:</p>
-
-               <div class="icons">
-                <div class="svg_android" >
-                  <a href="" target="_blank" id="icon">
-                      <svg xmlns="http://www.w3.org/2000/svg"
-                       width="32"
-                        height="36"
-                         fill="#A4CA27"
-                          class="bi-android"
-                           viewBox="0 0 16 16">
-                          <path d="M2.76 3.061a.5.5 0 0 1 .679.2l1.283 2.352A8.94 8.94 0 0 1 8 5a8.94 8.94 0 0 1 3.278.613l1.283-2.352a.5.5 0 1 1 .878.478l-1.252 2.295C14.475 7.266 16 9.477 16 12H0c0-2.523 1.525-4.734 3.813-5.966L2.56 3.74a.5.5 0 0 1 .2-.678ZM5 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm6 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"/>
-                        </svg>
-                  </a>
-
-              </div>
-                   <div class="svg_" id="icon">
-                       <a href="" target="_blank" >
-                           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="36" fill="black" class="bi bi-apple" viewBox="0 0 16 16">
-                               <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"/>
-                               <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"/>
-                             </svg>
-                       </a>
-                   </div>
-
-               </div>
-               </div>
+      <div class="container">
+        <div class="form">
+          <div class="smallheader">
+            <strong style="color: white"
+              >Faça um teste no portal do cliente.</strong
+            >
+          </div>
+          <div class="inputinformation">
+            <div class="campo">
+              <input
+                type="text"
+                id="login"
+                placeholder="Usuário:teste"
+                value="teste"
+                onclick="clearinput(this)"
+                onblur="addback(this)"
+              />
+            </div>
+            <div class="campo">
+              <input
+                type="password"
+                id="password"
+                placeholder="Senha:123"
+                value="1234"
+                onclick="clearinput(this)"
+                onblur="addback(this)"
+              />
+            </div>
+            <div class="access">
+              <button class="button">Acessar</button>
+            </div>
           </div>
 
-       </div>
-     </div>
+          <div class="divider"></div>
+
+          <div class="smallfooter">
+            <p>Disponível nas Lojas:</p>
+
+            <div class="icons">
+              <div class="svg_android">
+                <a href="" target="_blank" id="icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="36"
+                    fill="#A4CA27"
+                    class="bi-android"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M2.76 3.061a.5.5 0 0 1 .679.2l1.283 2.352A8.94 8.94 0 0 1 8 5a8.94 8.94 0 0 1 3.278.613l1.283-2.352a.5.5 0 1 1 .878.478l-1.252 2.295C14.475 7.266 16 9.477 16 12H0c0-2.523 1.525-4.734 3.813-5.966L2.56 3.74a.5.5 0 0 1 .2-.678ZM5 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm6 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <div class="svg_" id="icon">
+                <a href="" target="_blank">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="36"
+                    fill="black"
+                    class="bi bi-apple"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"
+                    />
+                    <path
+                      d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="stats">
       <div class="stat">
@@ -241,104 +294,58 @@
 
     <div class="content">
       <div class="cards">
-        <div class="card">
+        <div class="card maps">
           <div class="mainText">
-            <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
-            <path
-              d="M17.091 8.18182L10.091 15.1818L6.90918 12"
-              stroke="#00856F"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-            <h2>Mapas</h2>
-            <p>
-              Veja os veículos no mapa, crie pontos de referências e seja informado quando eles passarem por algum destes pontos.
-            </p>
+            <div class="hidden-box">
+              <p>
+                Veja os veículos no mapa, crie pontos de referências e seja
+                informado quando eles passarem por algum destes pontos.
+              </p>
+            </div>
+            <div class="mini-title">
+              <h3>Mapas</h3>
+            </div>
 
+            <div class="servicedesc">
+              <p>Onde estão os veículos neste momento?</p>
+            </div>
           </div>
-          <h1 class="secondaryText">Hello TEST</h1>
-
         </div>
 
-        <div class="card">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
-            <path
-              d="M17.091 8.18182L10.091 15.1818L6.90918 12"
-              stroke="#00856F"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-
-          <h3>Relatórios</h3>
-          <p>
-            Seu cliente terá acesso a vários relatórios direto do app. Relatório de telemetria com curva acentuada, freada brusca e aceleração brusca.
-          </p>
+        <div class="card reports">
+          <div class="mainText">
+            <div class="hidden-box">
+              <p>
+                Seu cliente terá acesso a vários relatórios direto do app.
+                Relatório de telemetria com curva acentuada, freada brusca e
+                aceleração brusca.
+              </p>
+            </div>
+            <div class="mini-title">
+              <h3>Relatórios</h3>
+            </div>
+            <div class="servicedesc">
+              <p>Relatórios online dos veículos.</p>
+            </div>
+          </div>
         </div>
 
-        <div class="card">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
-            <path
-              d="M17.091 8.18182L10.091 15.1818L6.90918 12"
-              stroke="#00856F"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
+        <div class="card anchor">
+          <div class="mainText">
+            <div class="hidden-box">
+              <p>
+                Marque a posição onde seu veículo esteja parado e no caso dele
+                se mover, seu cliente será informado da violação
+              </p>
+            </div>
+            <div class="mini-title">
+              <h3>Ancora</h3>
+            </div>
 
-          <h3>Ancora</h3>
-          <p>
-            Marque a posição onde seu veículo esteja parado e no caso dele se mover, seu cliente será informado da violação.
-          </p>
-        </div>
-
-        <div class="card">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
-            <path
-              d="M17.091 8.18182L10.091 15.1818L6.90918 12"
-              stroke="#00856F"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-
-          <h3>Logística</h3>
-          <p>
-            Gerenciamento de cercas eletrônicas, perímetro, alertas e eventos. Saiba como seus motoristas estão dirigindo.
-          </p>
+            <div class="servicedesc">
+              <p>Por onde seus veículos passaram?</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -347,6 +354,11 @@
 
 <section id="about">
   <div class="wrapper">
+
+    <div class="content">
+      <div class="card">Hello</div>
+    </div>
+  </div>
       <div class="cards">
 
           <div class="card">
@@ -375,19 +387,19 @@
 
       </div>
     </div>
+
 </section>
 
 <section id="contact">
   <div class="wrapper">
     <div class="col-a">
-
       <header>
-      <h2>Entre em contato com a gente!</h2>
+        <h2>Entre em contato com a gente!</h2>
       </header>
 
       <div class="content">
         <ul>
-          <li style="color:white;">
+          <li style="color: white">
             <svg
               width="24"
               height="24"
@@ -429,27 +441,30 @@
           </svg>
           Faça um orçamento</a
         >
-
       </div>
     </div>
 
     <div class="col-b">
-      <img style="border-radius: 1rem;"
+      <img
+        style="border-radius: 1rem"
         src="../assets/mulherPc.jpg"
         alt="Mulher branca mexendo no celular"
       />
-
     </div>
   </div>
 </section>
-<hr>
+<hr />
 <footer>
   <div class="wrapper">
     <div class="col-a">
-
-      <button mat-icon-button href="#home"  >
-        <mat-icon svgIcon="logo" class="logo"  aria-hidden="false" aria-label="DrRaster"></mat-icon>
-         </button>
+      <button mat-icon-button href="#home">
+        <mat-icon
+          svgIcon="logo"
+          class="logo"
+          aria-hidden="false"
+          aria-label="DrRaster"
+        ></mat-icon>
+      </button>
 
       <p>
         ©2023 RealRastreamento. <br />
@@ -537,7 +552,6 @@
           </a>
         </li>
       </ul>
-
     </div>
   </div>
 </footer>
