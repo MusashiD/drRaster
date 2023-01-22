@@ -37,7 +37,7 @@
   border-radius: 1.312rem;
   background-color: rgba(251, 245, 245, 0.539);
   position: relative;
-  width: 73%;
+  width: 60%;
 }
 .form::before{
   content: '';
@@ -64,13 +64,13 @@
 }
 #login, #password {
   padding: 0.562rem 0.812rem;
-  height: 3.18rem;
-  width: 28.81rem;
+  height: 3.18em;
+  width: 16.81em;
 
 }
 div .access .button{
-  height: 4.18rem;
-  width: 28.81rem;
+  height: 4rem;
+  width: 25.81rem;
   padding: 0.625rem 1.25rem;
   font: 2rem "Helvetica Neue", sans-serif;
   font-weight: 600;
@@ -593,7 +593,7 @@ section .content p {
 
   #about ul{
     display: flex;
-    color: red;
+    color: rgb(254, 252, 252);
     flex-direction: row;
     gap: 0.5rem;
     flex-wrap: wrap;
@@ -615,7 +615,7 @@ section .content p {
 
   #about .cards p{
     font-size: 2.3rem;
-    color: red;
+    color: rgb(246, 246, 246);
   }
 
   #services .secondaryText{
@@ -649,7 +649,8 @@ section .content p {
 
   .form{
     margin-top:0;
-    top:2.8em;
+    top:2.5em;
+    margin-left: 10rem;
   }
 
   #services {
