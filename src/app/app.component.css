@@ -320,7 +320,7 @@ section .content p {
   border-radius: 0.6rem;
 }
 
-#services .card h3 {
+#services .card h3{
   margin-block: 1.6rem;
 }
 
@@ -343,21 +343,6 @@ section .content p {
   height: 100%;
   width: 100%;
   visibility: visible;
-}
-
-/*=== ABOUT =================================*/
-#about {
-  text-align: left;
-  background-color: #fefefe;
-}
-
-#about header h2 {
-  margin-bottom: 2.4rem;
-}
-
-#about .content p {
-  margin-top: 2.4rem;
-  margin-bottom: 6rem;
 }
 
 /*=== CONTACT =================================*/
@@ -594,6 +579,45 @@ section .content p {
     flex-grow: 1;
   }
 
+  #about .cards{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    gap: 3.8rem;
+  }
+
+  #about .card{
+    width: 32rem;
+    flex-grow: 1;
+  }
+
+  #about ul{
+    display: flex;
+    color: red;
+    flex-direction: row;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    font-size: 1.5rem;
+    margin-left: 2.5rem;
+  }
+
+  #about ul li{
+    width: 10rem;
+    margin-left:2rem
+  }
+
+  #about .cards h1{
+    font-size: 5.3rem;
+    color: red;
+    margin-bottom: 1.5rem;
+  }
+
+  #about .cards p{
+    font-size: 2.3rem;
+    color: red;
+  }
+
   #services .secondaryText{
     content: ' ';
     width: 0;
@@ -613,20 +637,6 @@ section .content p {
     display:block;
   }
 
-  /*===============ABOUT===================*/
-  #about .wrapper {
-    grid-template-columns: 48rem 1fr;
-    grid-template-areas: 'A B';
-    gap: 6.7rem;
-  }
-
-  #about .col-a {
-    align-self: center;
-  }
-
-  #about .contet p {
-    margin-bottom: 0;
-  }
   /*===============CONTACT===================*/
   #contact .wrapper {
     grid-template-columns: 1fr 57.5rem;
@@ -642,6 +652,16 @@ section .content p {
     top:2.8em;
   }
 
+  #services {
+    padding-bottom: 0;
+  }
+  #about{
+    height: 10rem;
+  }
+
+  #contact{
+    padding-bottom: 12rem;
+  }
 
 
 
