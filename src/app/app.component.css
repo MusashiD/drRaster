@@ -322,7 +322,7 @@ section .content p {
 
 }
 
-#services .card h3{
+#services .card h3 {
   margin-block: 1.6rem;
 }
 #services .hidden-box {
@@ -357,7 +357,6 @@ section .content p {
   visibility: visible;
 }
 
-
 #services .servicedesc {
   text-align: center;
   padding: 1.25rem;
@@ -366,7 +365,6 @@ section .content p {
   margin-right: 1.25rem;
   border-radius: 0.6rem;
   background-color:rgb(51, 51, 56);
-  
 }
 #services .servicedesc p {
   color: white;
@@ -376,9 +374,9 @@ section .content p {
   margin-top: 5rem;
   text-align: center;
   color: white;
- 
-  
-  
+
+
+
 }
 #services .maps {
   background-image: url(../assets/WhereRUcar.png);
@@ -390,13 +388,13 @@ section .content p {
   background-image: url(../assets/onlineReports.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-x: center; 
+  background-position-x: center;
 }
 #services .anchor {
   background-image: url(../assets/onlineposition.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-x: center; 
+  background-position-x: center;
 }
 #services .mini-title , .servicedesc{
   background-color: rgb(51, 51, 56);
@@ -411,7 +409,6 @@ section .content p {
   margin-left: 1.25rem;
   margin-right: 1.25rem;
   border-radius: 0.6rem;
-  
 }
 #services .card:hover .mini-title,
 #services .card:hover .servicedesc{
@@ -421,6 +418,8 @@ section .content p {
     -webkit-transition: all 0.5s;
     opacity: 0;
 }
+
+
 /*=== CONTACT =================================*/
 #contact {
   text-align: left;
@@ -655,22 +654,6 @@ section .content p {
     flex-grow: 1;
   }
 
-
-  /*===============ABOUT===================*/
-  #about .wrapper {
-    grid-template-columns: 48rem 1fr;
-    grid-template-areas: 'A B';
-    gap: 6.7rem;
-  }
-
-  #about .col-a {
-    align-self: center;
-  }
-
-  #about .contet p {
-    margin-bottom: 0;
-  }
-=======
   #about .cards{
     display: flex;
     flex-direction:row;
