@@ -1,56 +1,30 @@
 <mat-toolbar color="primary" class="toolbar">
-  <button mat-icon-button>
-    <mat-icon
-      svgIcon="logo"
-      class="logo"
-      aria-hidden="false"
-      aria-label="DrRaster"
-    >
+  <button mat-icon-button  >
+    <mat-icon svgIcon="logo" class="logo"  aria-hidden="false" aria-label="DrRaster">
+
     </mat-icon>
     <span>RealRastreamento</span>
-  </button>
+     </button>
 
   <span class="example-spacer"></span>
-  <button
-    mat-icon-button
-    class="example-icon"
-    (click)="openMenu()"
-    aria-label="Example icon-button with heart icon"
-  >
+  <button mat-icon-button class="example-icon" (click)="openMenu()" aria-label="Example icon-button with heart icon">
     <mat-icon>menu</mat-icon>
   </button>
 </mat-toolbar>
 
-<mat-toolbar color="primary" class="toolbarDesktop">
+
+ <mat-toolbar color="primary" class="toolbarDesktop">
   <a href="#" class="logoButton">
-
-    <button mat-icon-button>
-      <mat-icon
-        svgIcon="logo"
-        class="logo"
-        aria-hidden="false"
-        aria-label="DrRaster"
-      ></mat-icon>
-    </button>
-    <h1>Real Rastreamento</h1>
-  </a>
-
-  <a class="buttonDesktop">Início</a>
-  <a class="buttonDesktop">Serviços</a>
-  <a class="buttonDesktop">Contato</a>
-  <a class="buttonRastreio" href="#contact"> Rastreie aqui seu veículo </a>
-</mat-toolbar>
-
      <button mat-icon-button >
     <mat-icon svgIcon="logo" class="logo"  aria-hidden="false" aria-label="DrRaster"></mat-icon>
      </button>
      <h1 style="display: contents;">RealRastreamento</h1>
     </a>
 
-      <a class="buttonDesktop">Início</a>
-      <a class="buttonDesktop">Serviços</a>
-      <a class="buttonDesktop">Contato</a>
-      <a class="buttonRastreio" href="#contact">
+      <a class="buttonDesktop" href="#home" >Início</a>
+      <a class="buttonDesktop" href="#service">Serviços</a>
+      <a class="buttonDesktop" href="#contact">Contato</a>
+      <a class="buttonRastreio" href="https://realrastreamento.com.br/login-local">
         Rastreie aqui seu veículo
       </a>
 
@@ -152,7 +126,7 @@
   </div>
 </div>
 
-  <section id="home" data-aos="fade-up">
+  <section id="home" data-aos="zoom-out">
   <div class="wrapper" >
     <div class="col-a">
       <header>
@@ -165,6 +139,7 @@
       </header>
 
       <div class="content">
+        <p style="font-size:2.2rem; line-height:0; color:red">App Mobile & Web</p>
         <p>O controle em suas mãos</p>
         <a class="button" href="#contact">
           <svg
@@ -215,7 +190,10 @@
               />
             </div>
             <div class="access">
-              <button class="button">Acessar</button>
+              <a href="https://portal.rastreamos.app/#/" style="text-decoration:none">
+                <button class="button">Acessar</button>
+              </a>
+
             </div>
           </div>
 
@@ -268,7 +246,7 @@
 
     <div class="stats">
       <div class="stat">
-        <h3>+3.500</h3>
+        <h3>+15.000</h3>
         <p>Clientes</p>
       </div>
 
@@ -294,7 +272,7 @@
 
     <div class="content">
       <div class="cards">
-        <div class="card maps">
+        <div class="card maps" data-aos="fade-up-right">
           <div class="mainText">
             <div class="hidden-box">
               <p>
@@ -312,13 +290,12 @@
           </div>
         </div>
 
-        <div class="card reports">
+        <div class="card reports" data-aos="fade-up-left">
           <div class="mainText">
             <div class="hidden-box">
               <p>
-                Seu cliente terá acesso a vários relatórios direto do app.
-                Relatório de telemetria com curva acentuada, freada brusca e
-                aceleração brusca.
+                Você terá acesso a vários relatórios direto do app.
+                Relatório de telemetria com velocidade, movimentação e alertas.
               </p>
             </div>
             <div class="mini-title">
@@ -330,12 +307,12 @@
           </div>
         </div>
 
-        <div class="card anchor">
+        <div class="card anchor" data-aos="flip-up">
           <div class="mainText">
             <div class="hidden-box">
               <p>
                 Marque a posição onde seu veículo esteja parado e no caso dele
-                se mover, seu cliente será informado da violação
+                se mover, você será informado da violação
               </p>
             </div>
             <div class="mini-title">
@@ -354,14 +331,9 @@
 
 <section id="about">
   <div class="wrapper">
-
-    <div class="content">
-      <div class="card">Hello</div>
-    </div>
-  </div>
       <div class="cards">
 
-          <div class="card"  data-aos="fade-right">
+          <div class="card" data-aos="fade-right">
               <h1>Visão</h1>
               <p>Estar entre as melhores do seguimento na América do Sul.</p>
          </div>
@@ -387,13 +359,36 @@
 
       </div>
     </div>
-
 </section>
 
 <section id="contact">
   <div class="wrapper">
+    <div class="col-a" data-aos="zoom-in-right">
+
+      <header>
+      <h2>Entre em contato com a gente!</h2>
+      </header>
+
+      <div class="content">
+        <ul>
+          <li style="color:white;">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
+                stroke="#00856F"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
               <path
                 d="M22 6L12 13L2 6"
+                stroke="#00856F"
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -403,7 +398,7 @@
           </li>
         </ul>
 
-        <a href="https://wa.me/553433154289" target="_blank" class="button">
+        <a href="https://wa.me/553499267068" target="_blank" class="button">
           <svg
             width="24"
             height="24"
@@ -418,15 +413,26 @@
           </svg>
           Faça um orçamento</a
         >
+
       </div>
     </div>
 
+    <div class="col-b" data-aos="flip-left"
+    data-aos-easing="ease-out-cubic"
+    data-aos-duration="2000">
+      <img style="border-radius: 1rem;"
+        src="../assets/mulherPc.jpg"
+        alt="Mulher branca mexendo no celular"
+      />
+
     </div>
   </div>
-<hr />
+</section>
+<hr>
 <footer>
   <div class="wrapper">
-    <div class="col-a">
+    <div class="col-a" data-aos="fade-up"
+    data-aos-duration="1000">
       <button mat-icon-button href="#home">
         <mat-icon
           svgIcon="logo"
@@ -441,7 +447,7 @@
         Todos os direitos reservados.
       </p>
     </div>
-    <div class="col-b">
+    <div class="col-b" data-aos="fade-left">
       <ul class="social-links">
         <li>
           <a target="_blank" href="https://instagram.com/maykbrito"
