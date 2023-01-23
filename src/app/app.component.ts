@@ -19,7 +19,7 @@ export class AppComponent implements OnChanges {
       console.log(this.width);
     this.matIconRegistry.addSvgIcon(
       'logo',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/marca real rastreamento.svg')
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/marca-real-rastreamento.svg')
     )
    }
   ngOnChanges(changes: SimpleChanges): void {
