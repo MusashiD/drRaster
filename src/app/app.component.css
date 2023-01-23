@@ -5,6 +5,9 @@
   box-sizing: border-box; /*limita o tamanho da caixa, atua no padding, defini um tamanho fixo*/
 }
 
+:root {
+  font-size: 62.5%;
+}
 #home{
   background-image: url(https://images.unsplash.com/photo-1616549972169-0a0d961c9905?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
   background-repeat: no-repeat;
@@ -64,13 +67,13 @@
 }
 #login, #password {
   padding: 0.562rem 0.812rem;
-  height: 3.18em;
-  width: 16.81em;
+  height: 2.18em;
+  width: 13.81em;
 
 }
 div .access .button{
   height: 4rem;
-  width: 25.81rem;
+  width: 100%;
   padding: 0.625rem 1.25rem;
   font: 2rem "Helvetica Neue", sans-serif;
   font-weight: 600;
@@ -132,6 +135,10 @@ div .smallheader, .smallfooter {
   width: min(50rem, 100%);
   margin-inline: auto;
   padding-inline: 2.4rem;
+}
+
+mat-toolbar .toolbarDesktop,.buttonDesktop, .buttonRastreio,.logoButton {
+  display:none;
 }
 
 
@@ -510,6 +517,20 @@ section .content p {
   .toolbar{
     display: none;
   }
+
+  .toolbarDesktop{
+    height: 6.8rem;
+    overflow: hidden;
+    flex-direction: row;
+    position: fixed;
+    z-index: 101;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgb(18, 18, 20);
+    font-size: large;
+    padding: 1rem 19rem;
+  }
   .teste{
     align-items: center;
   }
@@ -525,48 +546,6 @@ section .content p {
   .logoButton h1{
     margin-top: 1.5rem;
     color:white;
-  }
-
-  .toolbarDesktop{
-    height: 6.8rem;
-    overflow: hidden;
-    flex-direction: row;
-    position: fixed;
-    z-index: 101;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color:rgb(18, 18, 20);
-    font-size: large;
-    padding: 1rem 19rem;
-  }
-
-  .buttonDesktop {
-    background: rgb(18, 18, 20);
-
-    border: none;
-    border-radius: 4rem;
-
-    padding: 1.6rem 3.2rem;
-    width: fit-content;
-
-    color: white;
-    font-size: 1.4rem;
-    font-weight: 700;
-    text-transform: uppercase;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.6rem;
-
-    text-decoration: none;
-
-    transition: background 200ms;
-  }
-
-  .buttonDesktop:hover {
-    background-color: #9b0303;
   }
 
   .buttonRastreio{
@@ -763,7 +742,41 @@ section .content p {
     padding-bottom: 12rem;
   }
 
+  .buttonDesktop {
+    background: rgb(18, 18, 20);
 
+    border: none;
+    border-radius: 4rem;
 
+    padding: 1.6rem 3.2rem;
+    width: fit-content;
 
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+
+    text-decoration: none;
+
+    transition: background 200ms;
+  }
+
+  .buttonDesktop:hover {
+    background-color: #9b0303;
+  }
+
+  #login, #password {
+    padding: 0.562rem 0.812rem;
+    height: 3.18em;
+    width: 16.81em;
+
+  }
+  ul .social-links{
+    display: none;
+  }
 }
