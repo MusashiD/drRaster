@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "baseHref": "/drRaster/",
             "outputPath": "dist/dr-raster",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -36,6 +37,9 @@
             "scripts": []
           },
           "configurations": {
+            "github-pages":{
+              "baseHref": "/drRaster/"
+            },
             "production": {
               "budgets": [
                 {
