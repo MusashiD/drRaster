@@ -21,6 +21,16 @@ export class AppComponent implements OnChanges {
       'logo',
       this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/marca-real-rastreamento.svg")
     )
+
+    this.matIconRegistry.addSvgIcon(
+      'apple',
+      this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/appStore.svg")
+    )
+
+    this.matIconRegistry.addSvgIcon(
+      'play',
+      this.domSanitizer.bypassSecurityTrustResourceUrl("./assets/playstore.svg")
+    )
    }
   ngOnChanges(changes: SimpleChanges): void {
     throw new Error('Method not implemented.');

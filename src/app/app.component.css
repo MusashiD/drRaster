@@ -34,13 +34,11 @@
 }
 .form {
   justify-content: center;
-  margin-top: 2rem;
-  opacity: 0.8;
   padding: 1rem;
   border-radius: 1.312rem;
   background-color: rgba(251, 245, 245, 0.539);
   position: relative;
-  width: 60%;
+  width: 75%;
 }
 .form::before{
   content: '';
@@ -68,7 +66,7 @@
 #login, #password {
   padding: 0.562rem 0.812rem;
   height: 2.18em;
-  width: 13.81em;
+  width: 19.81em;
 
 }
 div .access .button{
@@ -118,16 +116,19 @@ div .smallheader, .smallfooter {
 }
 .icons{
   display: flex;
+  gap:2rem;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-.svg_android, .svg_apple {
-
+.applestore ,.playstore{
   position: relative;
-}
-.svg_apple, .svg_android {
   margin: 0 0.937rem;
+  transform: scale(2);
+}
+
+.playstore{
+  transform: scale(2.3);
 }
 
 
@@ -616,7 +617,7 @@ section .content p {
 
   /*===============HOME===================*/
   #home::before {
-    height: 54.2em;
+    height: 55.2em;
   }
   #home {
     padding-top: var(--nav-height);
@@ -776,7 +777,7 @@ section .content p {
   #login, #password {
     padding: 0.562rem 0.812rem;
     height: 3.18em;
-    width: 16.81em;
+    width: 20.81em;
 
   }
 
