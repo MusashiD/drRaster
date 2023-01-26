@@ -134,6 +134,7 @@ div .smallheader, .smallfooter {
 .wrapper {
   width: min(50rem, 100%);
   margin-inline: auto;
+  overflow-x: hidden;
   padding-inline: 2.4rem;
 }
 
@@ -324,7 +325,7 @@ section .content p {
   text-align: left;
   background: white;
   position: relative;
-  border: 1px solid var(--brand-light);
+  border: 0.1rem solid var(--brand-light);
   border-radius: 0.6rem;
 
 }
@@ -347,7 +348,7 @@ section .content p {
 }
 #services .hidden-box p{
   color: white;
-  padding: 7rem;
+  padding: 5rem;
   opacity: 1;
 }
 #services .anchor:hover .hidden-box,
@@ -357,10 +358,11 @@ section .content p {
   visibility: visible;
 }
 
+
 #services .maps:hover ::before,
 #services .reports:hover ::before,
 #services .anchor:hover ::before{
-  max-height: 300px;
+  max-height: 30rem;
   visibility: visible;
 }
 
@@ -584,6 +586,7 @@ section .content p {
   /*=== GERAL =================================*/
   .wrapper {
     width: min(112rem, 100%);
+    overflow-x: visible;
     display: grid;
   }
   /*=== NAVIGATION =================================*/
@@ -645,7 +648,7 @@ section .content p {
     gap: 0;
   }
   #home .stats .stat + .stat {
-    border-left: 1px solid var(--primary-color);
+    border-left: 0.1rem solid var(--primary-color);
   }
 
   #home .stats .stat {
@@ -776,7 +779,6 @@ section .content p {
     width: 16.81em;
 
   }
-  ul .social-links{
-    display: none;
-  }
+
+
 }
