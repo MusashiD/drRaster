@@ -116,10 +116,13 @@ div .smallheader, .smallfooter {
 }
 .icons{
   display: flex;
-  gap:2rem;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.icons a {
+  width: 10rem;
 }
 .applestore ,.playstore{
   position: relative;
