@@ -39,6 +39,7 @@
   background-color: rgba(251, 245, 245, 0.539);
   position: relative;
   width: 75%;
+  margin-bottom: 1rem;
 }
 .form::before{
   content: '';
@@ -437,7 +438,7 @@ section .content p {
   display: flex;
   flex-direction:column;
   align-items: center;
-  gap: 5.8rem;
+  gap:5.8rem;
 }
 
 #about .card{
@@ -456,6 +457,10 @@ section .content p {
   margin-left: 2.5rem;
 }
 
+#about .wrapper{
+  overflow-x: clip;
+}
+
 #about ul li{
   width: 10rem;
   margin-left:2rem
@@ -465,6 +470,7 @@ section .content p {
   font-size: 5.3rem;
   color: red;
   margin-bottom: 2.5rem;
+  height: 100%;
 }
 
 #about .cards p{
