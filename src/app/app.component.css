@@ -217,6 +217,23 @@ section .content p {
   transition: background 200ms;
 }
 
+.buttonMenuRastreio{
+  border-radius: 4rem;
+  background-color: red;
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+
+  color: #ffffff;
+
+  display: inline;
+  padding: 1.6rem 3.2rem;
+  width: 70%;
+}
+
+
 .button:hover {
   background-color: rgb(255, 0, 13);
 }
