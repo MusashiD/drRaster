@@ -530,6 +530,20 @@ section .content p {
   z-index: 1000;
 }
 
+.middle{
+  position: relative;
+  left: 18rem;
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+ margin:0;
+ margin-bottom: 2.4rem;
+
+}
+
 /*=== RESPONSIVO =================================*/
 @media (min-width: 1000px) {
 
@@ -798,11 +812,13 @@ section .content p {
   }
 
 .middle{
+  width: 10rem;
   display: flex;
-    position: relative;
-    right: 25rem;
-    bottom: 10rem;
-    gap: 2rem;
+  flex-direction: row;
+  position: relative;
+  left: -3rem;
+  bottom: 10rem;
+  gap: 2rem;
 }
 .middleHeader{
   position: relative;
