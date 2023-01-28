@@ -507,20 +507,27 @@ section .content p {
 /* BACK TO TOP */
 #backToTopButton {
   position: fixed;
-  bottom: 1rem;
+  bottom: 7rem;
   right: 2.5rem;
 
-  opacity: 0;
-  visibility: hidden;
+  opacity: 1;
+  visibility: visible;
 
   transform: translateY(100%);
   transition: 200ms;
+  z-index: 1000;
 }
+#wppbutton{
+  position: fixed;
+  bottom: 14rem;
+  right: 2.5rem;
 
-#backToTopButton.show {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+
+  transform: translateY(100%);
+  transition: 200ms;
+  z-index: 1000;
 }
 
 /*=== RESPONSIVO =================================*/
@@ -626,7 +633,7 @@ section .content p {
 
   /*===============HOME===================*/
   #home::before {
-    height: 55.2em;
+    height: 55.6em;
   }
   #home {
     padding-top: var(--nav-height);
@@ -790,5 +797,21 @@ section .content p {
 
   }
 
+.middle{
+  display: flex;
+    position: relative;
+    right: 25rem;
+    bottom: 10rem;
+    gap: 2rem;
+}
+.middleHeader{
+  position: relative;
+    left: 33rem;
+    bottom: 18rem;
+    gap: 2rem;
 
+}
+.Footer{
+  left: 6rem;
+}
 }
