@@ -168,34 +168,34 @@
               >Faça um teste no portal do cliente.</strong
             >
           </div>
-          <div class="inputinformation">
+          <form (submit)="postTeste($event)" class="inputinformation">
             <div class="campo">
               <input
                 type="text"
                 id="login"
+                name="login"
+                value="login"
                 placeholder="Usuário:teste"
-                value="teste"
-                onclick="clearinput(this)"
-                onblur="addback(this)"
+                [(ngModel)]="login"
               />
             </div>
             <div class="campo">
               <input
                 type="password"
                 id="password"
-                placeholder="Senha:123"
-                value="1234"
-                onclick="clearinput(this)"
-                onblur="addback(this)"
+                name="password"
+                value="senha"
+                placeholder="Senha:1234"
+                [(ngModel)]="senha"
               />
             </div>
+            <a href="https://www.realrastreamento.com.br" style="text-decoration:none" target="_blank">
             <div class="access">
-              <a href="https://portal.rastreamos.app" style="text-decoration:none" target="_blank">
-                <button class="button">Acessar</button>
-              </a>
 
+                <button class="button" type="submit">Acessar</button>
             </div>
-          </div>
+          </a>
+          </form>
 
           <div class="divider"></div>
 
@@ -256,8 +256,7 @@
           <div class="mainText">
             <div class="hidden-box">
               <p>
-                Veja os veículos no mapa, crie pontos de referências e seja
-                informado quando eles passarem por algum destes pontos.
+                Veja os veículos no mapa, acompanhe velocidade, posição e alertas.
               </p>
             </div>
             <div class="mini-title">
@@ -523,7 +522,7 @@ data-aos-duration="1000">
 </footer>
 
 
-<a href="https://wa.me/553499267068" id="wppbutton">
+<a href="https://wa.me/553499267068" *ngIf="!isMenuOpen" id="wppbutton">
   <svg
   width="50"
   height="50"
@@ -537,7 +536,7 @@ data-aos-duration="1000">
   />
 </svg>
 </a>
-<a id="backToTopButton" href="#home">
+<a *ngIf="!isMenuOpen" id="backToTopButton" href="#home">
   <svg
     width="50"
     height="50"
