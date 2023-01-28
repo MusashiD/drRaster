@@ -13,8 +13,8 @@ export class AppComponent implements OnChanges {
   isMenuOpen = false;
   width = screen.width;
   window = window;
-  login:any = '';
-  senha:any = '';
+  login:any = 'teste';
+  senha:any = '1234';
 
 
    constructor(
