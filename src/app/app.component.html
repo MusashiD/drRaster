@@ -1,3 +1,4 @@
+<ng-container *ngIf="showDashboard">
 <mat-toolbar color="primary" class="toolbar">
   <button mat-icon-button  >
     <mat-icon svgIcon="logo" class="logo"  aria-hidden="false" aria-label="DrRaster">
@@ -426,6 +427,7 @@ data-aos-duration="1000">
         ©2023 Real Rastreamento. <br />
         Todos os direitos reservados.
       </p>
+      <a href="#/politica-de-privacidade" target="_blank" style="color: #FFFAF1; text-decoration: underline; font-size: 0.9rem;">Política de Privacidade</a>
     </div>
     <div class="middleHeader">
       <h1 style="font-size:3rem">O aparelho é seu! Não é alugado!</h1>
@@ -561,3 +563,6 @@ data-aos-duration="1000">
     />
   </svg>
 </a>
+</ng-container>
+
+<router-outlet></router-outlet>

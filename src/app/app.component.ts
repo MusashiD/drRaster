@@ -2,6 +2,7 @@ import { TesteService } from './teste.service';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material/icon';
 import { Component, OnChanges, SimpleChanges,ChangeDetectorRef } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -15,14 +16,20 @@ export class AppComponent implements OnChanges {
   window = window;
   login:any = 'teste';
   senha:any = '1234';
-
+  showDashboard = true;
 
    constructor(
     private matIconRegistry:MatIconRegistry,
     private domSanitizer:DomSanitizer,
     private cdr: ChangeDetectorRef,
-    private postTest: TesteService
+    private postTest: TesteService,
+    private router: Router
    ){
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.showDashboard = !event.url.includes('politica-de-privacidade');
+      }
+    });
       console.log(this.width);
     this.matIconRegistry.addSvgIcon(
       'logo',
