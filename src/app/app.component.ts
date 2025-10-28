@@ -64,7 +64,7 @@ export class AppComponent implements OnChanges {
 
     this.postTest.postTest(request).subscribe(
       (res:any) =>{
-        let url = `https://www.realrastreamento.com.br/auth/${res.token}`
+        let url = `https://portal.realrastreamento.com.br/auth/${res.token}`
         const w = window.open(url, '_blank');
           if (w) {
           w.focus(); // okay now
